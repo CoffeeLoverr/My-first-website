@@ -1,57 +1,73 @@
-body { 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
     background-color: white;
+    max-width: 1920px;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 
 .topnav {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    width: 100%;   
-    position: fixed;
-    padding-top: 1%;
-    padding-bottom: 3%;
-    margin-top: 0;
-    height: 4%;
-    background-color: white;
-    border-bottom: solid rgba(0, 0, 128, 0.093);
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
-    padding-right: 3%;
-    left: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  border-bottom: solid rgba(0, 0, 128, 0.177);
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 10;
+
+}
+
+.burger-menu {
+  display: flex;
+  align-items: center;
+}
+
+
+.burger-menu__nav {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+
+
 }
 
 .topnav a {
-      
-   
-    margin-right: 5%;
-    margin-top: 3%; 
-    margin-bottom: 5%;
+
     text-decoration: none;
     color: navy;
     font-size: 1.2em;
     text-transform: uppercase;
-    font-family: Oswald;    
-    padding: 1%;
+    font-family: Oswald;
+    font-weight: 500;
+    padding: 10px;
+    box-sizing: border-box;
 
-    
+
+}
+
+.burger-menu__nav a {
+  margin-left: 5%;
+
 }
 
 h1 {
+    margin: 0;
     font-size: 1.4em;
     color: navy;
     text-transform: uppercase;
     font-family: oswald;
-    letter-spacing: 0.05em; 
-    margin-top: 1%;    
-    margin-left: 10%;
+    letter-spacing: 0.05em;
     font-weight: bold;
-}
 
-header {
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-       
 }
-
 
 
 h2 {
@@ -59,7 +75,7 @@ h2 {
     color: navy;
     text-transform: uppercase;
     padding-left: 5%;
-    padding-top: 9%;
+    padding-top: 5%;
     font-family: oswald;
     letter-spacing: 0.05em;
 }
@@ -68,20 +84,13 @@ h2 {
 h3 {
     padding-bottom: 0.5%;
     padding-top: 2%;
-    padding-left: 7.5%;
+    padding-left: 5%;
     font-family: oswald;
     padding-right: 2%;
     font-size: 1.2em;
-    
+
 }
 
-
-
-
-
-.burger-menu__nav {
-    text-align: right;
-}
 
 .link:hover {
     background-color: #ff8c69;
@@ -92,11 +101,10 @@ h3 {
 
 
 P {
-    
-    padding-left: 10%;
+
+    padding-left: 5%;
     padding-right: 10%;
     font-size: 1.2em;
-    text-indent: 3%;
     text-align: justify;
     line-height: 1.5em;
     margin-top: 0.5em;
@@ -104,31 +112,228 @@ P {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 .competences p {
-   
-   
+
+
    text-align: center;
    line-height: 1.5em;
    font-size: 1em;
 
-   
+
 }
 
 .cell {
+
+  position: relative;
   border-radius: 3%;
 
- 
+
+}
+
+.cell_2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
 li {
-    display: inline;
-    margin-left: 3%;
-    margin-right: 3%;
+
     font-family: oswald;
-    text-transform: uppercase;   
-    font-size: 1em; 
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
 
 }
+
+.clients_1::before {
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Международный бизнес";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.clients_2::before {
+
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Международные организации";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.clients_3::before {
+
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Международные форумы";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+.clients_4::before {
+
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Государственные структуры";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+.clients_1_en::before {
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "International Business";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.clients_2_en::before {
+
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "International Organizations";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.clients_3_en::before {
+
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "International Forums";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+
+.clients_4_en::before {
+
+  background: #eeeeec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Governmental organizations";
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'oswald';
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
 
 .row_1 {
 
@@ -137,40 +342,44 @@ li {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
+    text-align: center;
     column-gap: 3%;
     margin-top: 3%;
-    
-    
+
+
 }
 
 .row_2 {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+    text-align: center;
     column-gap: 4%;
     margin-top: 3%;
     background-color: #eeeeec;
-    margin-bottom: 3%;
-    
-    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    align-items: center;
+
 }
+
+
 
 ul {
     list-style-type: none;
     font-size: 1.2em;
     text-align: left;
-    padding-bottom: 1%;
-    padding-top: 1%;
+    padding: 0;
     line-height: 1.5em;
     text-align: center;
-    
-    
+    max-width: 1920px;
+
+
+
+
     /*box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);*/
-    
-    
-    
+
+
+
 }
 
 .cell h4 {
@@ -181,27 +390,30 @@ ul {
 
 
 .cell p  {
+
     font-size: 1.2em;
     text-align: left;
     padding-left: 7%;
     padding-bottom: 1%;
     margin-bottom: 5%;
     text-indent: 0;
-    
-    
+
+
 }
-    
+
 
 .customers p {
 
     line-height: 1.35px;
-    
+
+
 }
 
 a {
     text-decoration: none;
     color: navy;
     font-weight: 500;
+
 
 }
 
@@ -215,13 +427,9 @@ a:hover {
     margin-top: 5%;
     padding-left: 20%;
     padding-right: 20%;
+
 }
 
-
-  
-.me {
-    padding-top: 12%;
-}
 
 
 iframe {
@@ -235,7 +443,7 @@ iframe {
 #lang {
     color: #ff8c69;
 
-} 
+}
 
 #lang:hover {
     color: navy;
@@ -246,7 +454,7 @@ iframe {
 .competences h3 {
     text-transform: uppercase;
     margin-top: 10px;
-    
+
 }
 
 
@@ -265,7 +473,7 @@ h4 {
 }
 
 .videos p {
-    
+
     text-align: center;
     font-family: oswald;
     margin-left: 20%;
@@ -274,7 +482,13 @@ h4 {
 .email {
     text-indent: 0%;
     padding-left: 7.5%;
-    
+
+
+}
+
+.contacts  {
+
+  padding-top: 10%;
 
 }
 
@@ -286,8 +500,9 @@ footer {
     background-color: #eeeeec;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 0; 
-    
+    margin-bottom: 0;
+    margin-top: 1%;
+
 }
 
 
@@ -299,11 +514,12 @@ footer {
 .bottom-nav {
     display: block;
     width: 90%;
-    justify-content: space-between; 
+    justify-content: space-between;
     font-family: oswald;
     margin-top: 2%;
     margin-left: 7.5%;
-    
+
+
 }
 
  .bottom-nav li {
@@ -314,15 +530,19 @@ footer {
     margin-right: 1%;
     font-style: oblique;
     font-size: 0.8em;
-    
+
 }
 
-.about {
+.about_wrapper {
 
 display: grid;
 grid-template-columns: 2fr 1fr;
+padding-left: 25px;
+
 
 }
+
+
 
 #menu__toggle {
     display: none;
@@ -330,47 +550,52 @@ grid-template-columns: 2fr 1fr;
 
   ::-webkit-scrollbar-track {
 	background-color: rgb(246, 241, 241); /*Цвет скролла*/
-    
-} 
-::-webkit-scrollbar-thumb { 
+
+}
+::-webkit-scrollbar-thumb {
 	border-radius: 5px; /*Закругление ползунка*/
 	background-color: #ccc; /*Цвет ползунка*/
-} 
-::-webkit-scrollbar { 
+}
+::-webkit-scrollbar {
 	width: 6px;  /*Толщина скролла*/
 }
 
 @media (max-width: 1200px) {
 
 .videos {
-    
+
     padding-left: 10%;
     padding-right: 10%;
 }
-
-
-
-
+}
 
 @media (max-width: 900px) {
 
-    .about {
+
+  .topnav {
+    position: fixed;
+    background-color: white;
+    margin-top: -15px;
+
+  }
+
+    .about_wrapper {
 
         display: block;
-        
+
     }
 
     .image {
         text-align: center;
         margin-top: 5%;
-        
+
 }
 
-/*БУРГЕ-МЕНЮ*/ 
+/*БУРГЕР-МЕНЮ*/
 
 .burger-menu__button {
     position: fixed;
-    top: 2%;
+    top: 30px;
     left: 83%;
     width: 6%;
     min-width: 30px;
@@ -378,14 +603,14 @@ grid-template-columns: 2fr 1fr;
     border-radius: 20%;
     cursor: pointer;
     z-index: 30;
-    
-    
-    
+
+
+
     }
-  
+
     a.burger-menu__button  {
         background-color: transparent;
-                  
+
     }
 
 
@@ -397,7 +622,7 @@ grid-template-columns: 2fr 1fr;
     height: 4px;
     width: 100%;
     background-color: navy;
-    
+
 
   }
 
@@ -405,51 +630,50 @@ grid-template-columns: 2fr 1fr;
     top: 50%;
     left: 50%; /*было 0*/
     transform: translate(-50%, -50%);
-    
-    
+
+
 
   }
 
   .burger-menu__lines::before {
     content: '';
     top: -12px;
-    
-    
+
+
   }
 
   .burger-menu__lines::after {
     content: '';
     top: 12px;
-    
-    
+
+
   }
 
-  .burger-menu_active .burger-menu__lines { 
+  .burger-menu_active .burger-menu__lines {
     background-color: transparent;
-    
+
   }
 
   .burger-menu_active .burger-menu__lines::before {
     top: 0;
     transform: rotate(45deg);
-    
+
   }
 
   .burger-menu_active .burger-menu__lines::after {
     top: 0;
     transform: rotate(-45deg);
-    
+
   }
 
   .burger-menu__nav {
     display: flex;
     flex-flow: column;
-    position: fixed;   
-    z-index: 20; 
-    top: -120%;
+    position: fixed;
+    z-index: 20;
+    top: -250%;
     left: 0%;
     width: 100%;
-    height: 50%;
     padding: 10%;
     text-align: center;
     background-color: #ECEFF1;
@@ -468,23 +692,32 @@ grid-template-columns: 2fr 1fr;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
-        
-  
+
+
+
   }
 
-  
+
   .burger-menu__nav a {
-    padding-top: 2%; 
-    padding-bottom: 2%;
+
     color: navy;
     font-size: 1.2em;
-    text-transform: uppercase;
     font-family: Oswald;
     width: 50%;
     margin-left: 17%;
-    
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+
+
+
   }
-  
+
+  .topnav a {
+    padding: 10px;
+
+
+  }
+
 
   .burger-menu__overlay {
     display: none;
@@ -499,7 +732,7 @@ grid-template-columns: 2fr 1fr;
 
   .burger-menu_active .burger-menu__overlay {
     display:  block;
-    
+
   }
 
   /*КОНЕЦ МЕНЮ*/
@@ -507,12 +740,12 @@ grid-template-columns: 2fr 1fr;
   .me {
     padding-top: 25%;
 }
-  
+
 p {
     text-indent: 7%;
     font-size: 1em;
-    text-align: start;
-    
+    text-align: justify;
+
 }
 
 
@@ -520,18 +753,30 @@ p {
 .row_1 {
 
     display: block;
-    
+
 }
 
 .row_2 {
 
     display: block;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2px;
 }
+
 
 .cell {
     margin-bottom: 5%;
 
 
+}
+
+.cell_2:not(:last-child) {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 1px dotted gray;
 }
 
 .cell p  {
@@ -543,7 +788,7 @@ p {
 
 .videos {
     display: block;
-    
+
 }
 
 .video {
@@ -552,7 +797,7 @@ p {
 
 footer   {
     font-size: 0.7em;
-  
+
   }
 
 h1 {
@@ -560,31 +805,28 @@ h1 {
     font-size: 1em;
     margin-top: 12%;
     font-weight: bold;
-    
+
 }
 
 .topnav {
 
-    height: 8%;
+    padding-bottom: 3%;
     grid-template-columns: 1fr 1fr;
-    
+
 }
 h2 {
-    
-    padding-top: 25%;
+
+    padding-top: 20%;
     font-size: 1em;
 
 
 }
 
+
 .contacts  {
 
     padding-top: 10%;
 
-}
-.bottom-nav {
-    display: 
-    gap: 2em;
 }
 
 .email {
@@ -602,18 +844,285 @@ iframe {
     margin: 0;
 }
 
-
-
-    
+#backToTop {
+  display: none;
 }
+
+.interpreting::before {
+  position: absolute;
+  content: "Устный перевод";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+
+}
+
+.interpreting.hide-before::before {
+
+  visibility: hidden;
+
+
+}
+
+.written::before {
+  position: absolute;
+  content: "письменный перевод";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+
+}
+
+.written.hide-before::before {
+
+  visibility: hidden;
+
+}
+
+.teaching::before {
+  position: absolute;
+  content: "обучение английскому языку";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+  text-align: center;
+
+}
+
+.teaching.hide-before::before {
+
+  visibility: hidden;
+
+}
+
+.consulting::before {
+  position: absolute;
+  content: "консультирование";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+
+}
+
+.consulting.hide-before::before {
+  visibility: hidden;
+}
+
+.interpreting_en::before {
+  position: absolute;
+  content: "interpretation";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+
+}
+
+.interpreting_en.hide-before::before {
+
+  visibility: hidden;
+
+}
+
+.written_en::before {
+  position: absolute;
+  content: "translation";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+
+}
+
+.written_en.hide-before::before {
+
+  visibility: hidden;
+
+}
+
+.teaching_en::before {
+  position: absolute;
+  content: "english training";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+  text-align: center;
+
+}
+
+.teaching_en.hide-before::before {
+
+  visibility: hidden;
+
+}
+
+.consulting_en::before {
+  position: absolute;
+  content: "consulting";
+  top: 0;
+  left: 0;
+  background: rgb(246, 241, 241);;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-family: oswald;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: navy;
+
+}
+
+.consulting_en.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_1.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_2.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_3.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_4.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_1_en.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_2_en.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_3_en.hide-before::before {
+  visibility: hidden;
+}
+
+.clients_4_en.hide-before::before {
+  visibility: hidden;
+}
+
+.contacts_ul {
+  display: flex;
+
+
+}
+
+.development_details {
+  font-size: 0.9em;
+}
+
+
+#tele {
+  width: 30%;
+}
+
+#mail {
+  width: 50%;
+}
+
+.grid-item:not(:last-child) {
+  border-bottom: 1px dotted navy;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+}
+
 @media (max-width: 400px) {
     li {
         display: block;
         margin-left: 3%;
         margin-right: 3%;
         font-family: oswald;
-        text-transform: uppercase;  
-        text-align: left;  
+        text-transform: uppercase;
+
 
 }
 
@@ -628,6 +1137,359 @@ h2 {
 }
 
 .me {
-    padding-top: 30%; 
+    padding-top: 35%;
 }
-} 
+
+.burger-menu__nav a {
+
+    color: navy;
+    font-size: 1.2em;
+    font-family: Oswald;
+    width: 50%;
+    margin-left: 17%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    font-size: 1em;
+}
+
+h1 {
+
+    font-size: 1em;
+    margin-top: 20%;
+    margin-bottom: 0;
+    font-weight: bold;
+
+}
+
+}
+
+@media (min-width: 900px) {
+/*кнопка вернуться наверх*/
+  #backToTop {
+
+    position: fixed; /* Фиксированное позиционирование */
+    top: 90%; /* Отступ снизу */
+    right: 3%; /* Отступ справа */
+    z-index: 99; /* Сделать кнопку поверх других элементов */
+    border: none; /* Убрать границу */
+    outline: none; /* Убрать контур */
+    background-color: #ff8c69; /* Цвет фона */
+    color: navy; /* Цвет текста */
+    cursor: pointer; /* Стиль курсора */
+    padding: 15px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление углов */
+  }
+
+  .interpreting::before {
+    position: absolute;
+    content: "Устный перевод";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+
+  }
+
+  .interpreting:hover::before {
+
+    visibility: hidden;
+
+  }
+
+  .written::before {
+    position: absolute;
+    content: "письменный перевод";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+    text-align: center;
+
+  }
+
+  .written:hover::before {
+
+    visibility: hidden;
+
+  }
+
+  .teaching::before {
+    position: absolute;
+    content: "обучение английскому языку";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+    text-align: center;
+
+  }
+
+  .teaching:hover::before {
+
+    visibility: hidden;
+
+  }
+
+  .consulting::before {
+    position: absolute;
+    content: "консультирование";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+
+  }
+
+  .consulting:hover::before {
+    visibility: hidden;
+  }
+
+  /*английская версия*/
+
+  .interpreting_en::before {
+    position: absolute;
+    content: "Interpretation";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+
+  }
+
+  .interpreting_en:hover::before {
+
+    visibility: hidden;
+
+  }
+
+  .written_en::before {
+    position: absolute;
+    content: "translation";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+
+  }
+
+  .written_en:hover::before {
+
+    visibility: hidden;
+
+  }
+
+  .teaching_en::before {
+    position: absolute;
+    content: "English training";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+
+  }
+
+  .teaching_en:hover::before {
+
+    visibility: hidden;
+
+  }
+
+  .consulting_en::before {
+    position: absolute;
+    content: "consulting";
+    top: 0;
+    left: 0;
+    background: rgb(246, 241, 241);;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: oswald;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: navy;
+
+  }
+
+  .consulting_en:hover::before {
+    visibility: hidden;
+  }
+
+  .clients_1:hover::before {
+    visibility: hidden;
+
+  }
+
+  .clients_2:hover::before {
+    visibility: hidden;
+
+  }
+
+  .clients_3:hover::before {
+    visibility: hidden;
+
+  }
+
+  .clients_4:hover::before {
+    visibility: hidden;
+
+  }
+
+  .clients_1_en:hover::before {
+    visibility: hidden;
+
+  }
+
+  .clients_2_en:hover::before {
+    visibility: hidden;
+
+  }
+
+  .clients_3_en:hover::before {
+    visibility: hidden;
+
+  }
+
+  .clients_4_en:hover::before {
+    visibility: hidden;
+
+  }
+
+  .footer_wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: space-around;
+   max-width: 1920px;
+
+  }
+
+  .contacts_ul {
+   text-align: left;
+   padding-left: 10%;
+
+  }
+
+  .contacts_ul li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    text-align: left;
+
+  }
+
+  .grid-item:not(.development_details) {
+    border-right: 1px dotted navy;
+  }
+
+  .legal_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .development_details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9em;
+    }
+
+    .Contacts_mail img {
+      width: 20%;
+    }
+
+    .Contacts_telegram img {
+      width: 13%;
+    }
+
+
+  }
+
+
+
+
+@media (min-width: 1920px) {
+  #backToTop {
+    top: 90%;
+    right: 19.5%;
+
+}
+
+  #backToTop:hover {
+    background-color: #555; /* Цвет фона при наведении */
+  }
+
